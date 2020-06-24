@@ -287,7 +287,7 @@ foreach($CSVs as $CSV){
   
   $Index = 0;
   $Headers = array();
-  foreach($CSV as $Rows){
+  foreach($CSV as $Row){
     if($Index==0){
       foreach($Row as $Key => $Value){
         $Headers[]=$Key;
@@ -307,7 +307,7 @@ foreach($CSVs as $CSV){
   
   ?>
     <script>
-      window.data = <?php echo $JSON; ?>;
+      window.data = '<?php echo $JSON; ?>';
     </script>
   <?php
   //Later it will make tabs for more files
