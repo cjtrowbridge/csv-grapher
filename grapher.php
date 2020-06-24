@@ -22,7 +22,6 @@ function getColor(){
     'Green',
     'Teal',
     'DarkCyan',
-    'Color Picker',
     'DeepSkyBlue',
     'DarkTurquoise',
     'MediumSpringGreen',
