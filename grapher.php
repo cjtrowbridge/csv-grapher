@@ -221,7 +221,14 @@ function ArrTabler($arr, $table_class = 'table tablesorter tablesorter-ice table
 function getColumn($CSV, $Index){
   $Output = array();
   foreach($CSV as $Row){
-    $Output[] = $Row[$Index];
+    $i = 0;
+    foreach($Row as $Key => $Value){
+      if($i == $Index){
+        $Output[] = $Value;
+        break;
+      }
+      $i++;
+    }
   }
   return $Output;
 }
