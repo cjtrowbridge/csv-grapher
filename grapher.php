@@ -317,7 +317,7 @@ foreach($CSVs as $CSV){
   
   ?>
     <script>
-      window.data = '<?php echo $JSON; ?>';
+      window.data = <?php echo $JSON; ?>;
     </script>
   <?php
   //Later it will make tabs for more files
