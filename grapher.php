@@ -329,6 +329,7 @@ foreach($CSVs as $CSV){
 </div><!--End Container-->
 
 <script>
+    console.log(window.data);
     var linearGraph = new Chart(document.getElementById("linearGraph").getContext("2d"), {
     type: "line",
     data: {
