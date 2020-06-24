@@ -291,6 +291,7 @@ foreach($CSVs as $CSV){
     if($Index==0){
       foreach($Row as $Key => $Value){
         $Headers[]=$Key;
+	$Data['dates'] = getColumn($CSV,0);
         $Data['dataset'][] = array(
           'label'       => $Key,
           'fill'        => 'false',
