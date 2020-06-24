@@ -284,7 +284,8 @@ foreach($CSVs as $CSV){
   );
   
   
-  
+  var_dump($CSV);
+	
   $Index = 0;
   $Headers = array();
   foreach($CSV as $Row){
