@@ -294,15 +294,19 @@ foreach($CSVs as $CSV){
   $Headers = array();
   foreach($CSV as $Row){
     if($Index==0){
+      $Col = 0;
       foreach($Row as $Key => $Value){
         $Headers[]=$Key;
 	$Data['dates'] = getColumn($CSV,0);
-        $Data['dataset'][] = array(
-          'label'       => $Key,
-          'fill'        => 'false',
-          'borderColor' => getColor(),
-          'data'        => getColumn($CSV,(count($Headers)-1))
-        );
+        if($Col>0){
+	  $Data['dataset'][] = array(
+            'label'       => $Key,
+            'fill'        => 'false',
+            'borderColor' => getColor(),
+            'data'        => getColumn($CSV,(count($Headers)-1))
+          );
+        }
+	$Col++;
       }
     }
     
