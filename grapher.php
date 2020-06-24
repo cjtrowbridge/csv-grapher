@@ -290,9 +290,6 @@ foreach($CSVs as $CSV){
     'dataset' => array()
   );
   
-  
-  var_dump($CSV);
-	
   $Index = 0;
   $Headers = array();
   foreach($CSV as $Row){
