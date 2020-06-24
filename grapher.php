@@ -295,7 +295,7 @@ foreach($CSVs as $CSV){
           'label'       => $Key,
           'fill'        => 'false',
           'borderColor' => getColor(),
-          'data'        => getColumn($CSV,(count($Headers[])-1))
+          'data'        => getColumn($CSV,(count($Headers)-1))
         );
       }
     }
