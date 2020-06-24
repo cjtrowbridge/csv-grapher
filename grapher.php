@@ -281,7 +281,7 @@ foreach($CSVs as $CSV){
   $Data = array(
     'dates'   => array(),
     'dataset' => array()
-  ));
+  );
   
   
   
