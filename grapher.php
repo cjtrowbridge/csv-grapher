@@ -233,6 +233,9 @@ function getColumn($CSV, $Index){
   return $Output;
 }
 
+
+$CSVs = findCSVs();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -258,6 +261,7 @@ function getColumn($CSV, $Index){
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <h1>CSV Grapher: <?php echo $CSVs[0]; ?></h1>
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="linear-tab" data-toggle="pill" href="#linear" role="tab" aria-controls="linear" aria-selected="true">Linear Scale</a>
@@ -279,7 +283,7 @@ function getColumn($CSV, $Index){
 <?php
 //Ok Begin
 
-$CSVs = findCSVs();
+
 
 foreach($CSVs as $CSV){
   $CSV = CSV($CSV);
