@@ -288,7 +288,7 @@ $CSVs = findCSVs();
 foreach($CSVs as $CSV){
   $CSV = CSV($CSV);
 	
-  $CSV = rsort ($CSV);
+  $CSV = rsort($CSV);
   $CSV = array_slice($CSV,0,100);
 	
   echo ArrTabler($CSV);
