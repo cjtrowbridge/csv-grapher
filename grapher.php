@@ -1,13 +1,13 @@
 <?php
 
 function CSV($File){	
-	$rows   = array_map('str_getcsv', file($File));
+    $rows   = array_map('str_getcsv', file($File));
     $header = array_shift($rows);
     $csv    = array();
     foreach($rows as $row) {
         $csv[] = array_combine($header, $row);
     }
-	return $csv;
+    return $csv;
 }
 
 
@@ -287,6 +287,10 @@ $CSVs = findCSVs();
 
 foreach($CSVs as $CSV){
   $CSV = CSV($CSV);
+	
+  $CSV = rsort ($CSV);
+  #CSV = array(slice($CSV,0,100);
+	
   echo ArrTabler($CSV);
   
   $Data = array(
