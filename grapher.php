@@ -289,7 +289,7 @@ foreach($CSVs as $CSV){
   $CSV = CSV($CSV);
   rsort($CSV);
   if(
-    (!(isset($_GET['limit']))||
+    (!(isset($_GET['limit'])))||
     (intval($_GET['limit'])==0)
   ){
     $_GET['limit']=100;
