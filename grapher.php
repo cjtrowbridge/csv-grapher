@@ -287,9 +287,15 @@ $CSVs = findCSVs();
 
 foreach($CSVs as $CSV){
   $CSV = CSV($CSV);
-	
   rsort($CSV);
-  $CSV = array_slice($CSV,0,100);
+  if(
+    (!(isset($_GET['limit']))||
+    (intval($_GET['limit'])==0)
+  ){
+    $_GET['limit']=100;
+  }
+  $Limit = intval($_GET['limit']);
+  $CSV = array_slice($CSV,0,$Limit);
 	
   echo ArrTabler($CSV);
   
